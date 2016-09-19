@@ -8,6 +8,7 @@
 \* 6. Footer
 /*===============================*/
 
+@import 'https://fonts.googleapis.com/css?family=David+Libre|Open+Sans:400,600';
 
 /*=================================
 \* 0. Reset
@@ -70,6 +71,24 @@ table {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+body {
+    background-color: #efefef;
+    font-family: 'David Libre', serif;
+    font-size: 14px;
+    line-height: 20px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    margin: 10px 0;
+}
+h1 {
+    
+}
+h2 {
+    font-size: 35px;
+    line-height: 45px;
+}
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -93,6 +112,17 @@ table {
 
 .countries-list {
     width: 100%;
+    position: relative;
+}
+.countries-list:before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    border-left: 1px #000 solid;
+    left: 50%;
+    top: 160px;
+    z-index: -1;
 }
 .country-desc-wrapper,
 .country-img-wrapper {
@@ -100,13 +130,33 @@ table {
     float: left;
     padding: 100px;
 }
+.country-desc-wrapper {
+    position: relative;
+}
+.country-desc-wrapper:after {
+    content: ">";
+    display: block;
+    position: absolute;
+    right: -17px;
+    top: 150px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+    text-align: center;
+    border: 2px #000 solid;
+    background-color: #efefef;
+}
 .clearfix:after {
     content: "";
     display: table;
     clear: both;
 }
 .country-img {
+    display: block;
     width: 100%;
+    -webkit-box-shadow: 0 5px 5px -2px rgba(0,0,0,.2);
+    box-shadow: 0 5px 5px -2px rgba(0,0,0,.5);
 }
 
 /*=================================
