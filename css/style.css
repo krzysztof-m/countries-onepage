@@ -119,7 +119,7 @@ h2 {
     display: block;
     position: absolute;
     height: 100%;
-    border-left: 1px #000 solid;
+    border-left: 1px #9a9a9a dashed;
     left: 50%;
     top: 160px;
     z-index: -1;
@@ -134,18 +134,24 @@ h2 {
     position: relative;
 }
 .country-desc-wrapper:after {
-    content: ">";
+    content: "\f041";
+    font-family: FontAwesome;
+    font-size: 20px;
     display: block;
     position: absolute;
-    right: -17px;
+    right: -22px;
     top: 150px;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
     vertical-align: middle;
     text-align: center;
-    border: 2px #000 solid;
+    border: 1px #39f solid;
     background-color: #efefef;
+    border-radius: 50%;
+    -webkit-box-shadow: 2px 2px 2px rgba(0,0,0,.2);
+    box-shadow: 2px 2px 2px rgba(0,0,0,.2);
+    color: #39f;
 }
 .clearfix:after {
     content: "";
