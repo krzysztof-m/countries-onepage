@@ -8,7 +8,7 @@
 \* 6. Footer
 /*===============================*/
 
-@import 'https://fonts.googleapis.com/css?family=David+Libre|Open+Sans:400,600';
+@import 'https://fonts.googleapis.com/css?family=David+Libre|Open+Sans:300,400,600';
 
 /*=================================
 \* 0. Reset
@@ -114,9 +114,53 @@ h2 {
 /*=================================
 \* 3. Intro (carousel)
 /*===============================*/
+.slide {
+    width: 100%;
+    height: 100vh;
+    background-position: center center;
+    position: relative;
+}
+.london { background-image: url("../img/slide-gb.jpg"); }
+.france { background-image: url("../img/slide-fr.jpg"); }
+.italy { background-image: url("../img/slide-it.jpg"); }
+.spain { background-image: url("../img/slide-sp.jpg"); }
 
-
-
+.slide-content {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    width: 50%;
+    opacity: 0;
+    -webkit-transition: opacity 2s ease;
+    -o-transition: opacity 2s ease;
+    transition: opacity 2s ease;
+}
+.slide-title {
+    display: inline-block;
+    background-color: #06c;
+    padding: 10px 70px;
+    z-index: 10;
+    position: relative;
+    color: #fff;
+    -webkit-box-shadow: 2px 2px 1px rgba(0,0,0,.3);
+    box-shadow: 2px 2px 1px rgba(0,0,0,.3);
+}
+.slide-text {
+    background-color: rgba(256,256,256,.85);
+    padding: 20px 30px;
+    position: relative;
+    left: 10px;
+    top: -20px;
+    z-index: 9;
+    font-size: 17px;
+    line-height: 25px;
+    font-family: "Open Sans";
+    font-weight: 300;
+    overflow: hidden;
+}
+.btn-slider {
+   float: right;
+}
 /*=================================
 \* 4. Countries list
 /*===============================*/
