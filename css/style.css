@@ -93,7 +93,18 @@ h2 {
     max-width: 1200px;
     margin: 0 auto;
 }
-
+.btn {
+    padding: 10px 30px;
+    border: 1px #39f solid;
+    color: #39f;
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 20px;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
 /*=================================
 \* 2. Header
 /*===============================*/
@@ -168,12 +179,33 @@ h2 {
 /*=================================
 \* 5. Call to action
 /*===============================*/
-
-
+#call-to-action {
+    background-color: #39f;
+}
+.call-to-action-wrapper {
+    padding: 50px 100px;
+    text-align: center;
+    color: #fff;
+}
+.call-to-action-btn {
+    color: #fff;
+    border-color: #fff;
+}
+.call-to-action-btn:hover,
+.call-to-action-btn:active,
+.call-to-action-btn:focus {
+    background-color: #fff;
+    color: #39f;
+}
 
 /*=================================
 \* 6. Footer
 /*===============================*/
-
-
+footer {
+    background-color: #494949;
+    color: #fff;
+}
+.credit-item {
+    display: inline-block;
+}
 
