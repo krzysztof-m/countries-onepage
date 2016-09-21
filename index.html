@@ -177,13 +177,11 @@
     
     <footer>
         <ul class="credits">
-            <li class="credit-item">Bootstrap</li>
+            <li class="credit-item">Photos: <a href="https://pixabay.com/" class="credit-link" target="_blank">pixabay.com</a></li>
             <!-- /.credit-item -->
-            <li class="credit-item">Bootstrap</li>
+            <li class="credit-item">Carousel: <a href="http://owlgraphic.com/owlcarousel/" class="credit-link" target="_blank">owl carousel</a></li>
             <!-- /.credit-item -->
-            <li class="credit-item">Bootstrap</li>
-            <!-- /.credit-item -->
-            <li class="credit-item">Bootstrap</li>
+            <li class="credit-item">Icons: <a href="http://fontawesome.io/" class="credit-link" target="_blank">Font Awesome</a></li>
             <!-- /.credit-item -->
         </ul>
         <!-- /.credits -->
@@ -204,13 +202,25 @@
           singleItem: true,
           autoPlay: true,
           beforeMove: function() {
-              $('.slide-content').eq(this.owl.currentItem).css('opacity','0');
+              //$('.slide-content').eq(this.owl.currentItem).css('opacity','0');
+              $('.slide').eq(this.owl.currentItem).find('.slide-title').removeClass('active');
+              $('.slide').eq(this.owl.currentItem).find('.slide-text').removeClass('active');
           },
           afterMove: function() {
-              $('.slide-content').eq(this.owl.currentItem).css('opacity','1');
+              //$('.slide-content').eq(this.owl.currentItem).css('opacity','1');
+              var currentSlide = this.owl.currentItem;
+              $('.slide').eq(currentSlide).find('.slide-title').addClass('active');
+              setTimeout(function() {
+                  $('.slide').eq(currentSlide).find('.slide-text').addClass('active');
+              },1000);
           }
      
       });
+        
+        $('.slide').eq(0).find('.slide-title').addClass('active');
+          setTimeout(function() {
+              $('.slide').eq(0).find('.slide-text').addClass('active');
+          },1000);
      
     });
 

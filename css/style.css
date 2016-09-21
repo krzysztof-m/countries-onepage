@@ -114,10 +114,24 @@ h2 {
 /*=================================
 \* 3. Intro (carousel)
 /*===============================*/
+#carousel {
+    position: relative;
+}
+.owl-controls {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 99;
+}
+.owl-page span {
+    background: #fff !important;
+    border: 2px #39f solid;
+}
 .slide {
     width: 100%;
     height: 100vh;
     background-position: center center;
+    background-attachment: cover;
     position: relative;
 }
 .london { background-image: url("../img/slide-gb.jpg"); }
@@ -130,10 +144,13 @@ h2 {
     bottom: 50px;
     left: 50px;
     width: 50%;
+}
+.slide-title,
+.slide-text {
+    -webkit-transition: all 2s ease;
+    -o-transition: all 2s ease;
+    transition: all 2s ease;
     opacity: 0;
-    -webkit-transition: opacity 2s ease;
-    -o-transition: opacity 2s ease;
-    transition: opacity 2s ease;
 }
 .slide-title {
     display: inline-block;
@@ -141,6 +158,7 @@ h2 {
     padding: 10px 70px;
     z-index: 10;
     position: relative;
+    top: -40px;
     color: #fff;
     -webkit-box-shadow: 2px 2px 1px rgba(0,0,0,.3);
     box-shadow: 2px 2px 1px rgba(0,0,0,.3);
@@ -150,13 +168,22 @@ h2 {
     padding: 20px 30px;
     position: relative;
     left: 10px;
-    top: -20px;
+    top: -60px;
     z-index: 9;
     font-size: 17px;
     line-height: 25px;
     font-family: "Open Sans";
     font-weight: 300;
     overflow: hidden;
+}
+
+.slide-title.active {
+    top: 0;
+    opacity: 1;
+}
+.slide-text.active {
+    top: -20px;
+    opacity: 1;
 }
 .btn-slider {
    float: right;
@@ -248,8 +275,22 @@ h2 {
 footer {
     background-color: #494949;
     color: #fff;
+    padding: 20px 0;
+}
+.credits {
+    text-align: center;
 }
 .credit-item {
     display: inline-block;
+    padding: 0 7px;
 }
-
+.credit-item + .credit-item {
+    border-left: 1px #fff solid;
+}
+.credit-link {
+    color: #cce6ff;
+    text-decoration: none;
+}
+.credit-link:hover {
+    color: #99ceff;
+}
