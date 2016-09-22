@@ -83,7 +83,8 @@ h1, h2, h3, h4, h5, h6 {
     margin: 10px 0;
 }
 h1 {
-    
+    font-size: 40px;
+    line-height: 50px;
 }
 h2 {
     font-size: 35px;
@@ -108,8 +109,40 @@ h2 {
 /*=================================
 \* 2. Header
 /*===============================*/
-
-
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    background-color: rgba(256,256,256,.8);
+}
+.brand {
+    font-family: "David Libre";
+    font-size: 30px;
+    line-height: 40px;
+}
+.brand-link {
+    text-decoration: none;
+    color: #39f;
+    text-shadow: 2px 2px 2px #06c;
+    padding: 0 20px;
+}
+.nav-brand {
+    float: left;
+}
+.nav-menu {
+    float: right;
+}
+.menu-item {
+    display: inline-block;
+    margin-top: 20px;
+}
+.menu-link {
+    display: inline-block;
+    padding: 5px 20px;
+    text-decoration: none;
+    color: #39f;
+    font-size: 20px;
+}
 
 /*=================================
 \* 3. Intro (carousel)
@@ -168,7 +201,7 @@ h2 {
     padding: 20px 30px;
     position: relative;
     left: 10px;
-    top: -60px;
+    top: -40px;
     z-index: 9;
     font-size: 17px;
     line-height: 25px;
