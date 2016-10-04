@@ -329,3 +329,66 @@ footer {
 .credit-link:hover {
     color: #99ceff;
 }
+/*=================================
+\* 7. Media queries
+/*===============================*/
+@media (max-width: 979px) {
+    .slide-content {
+        width: 90%;
+    }
+    .country-desc-wrapper,
+    .country-img-wrapper {
+        padding: 30px 50px;
+    }
+    .countries-list::before {
+        top: 110px;
+    }
+    .country-desc-wrapper::after {
+        top: 100px;
+    }
+}
+@media (max-width: 767px) {
+    .slide {
+        height: auto;
+        padding-top: 50px;
+    }
+    .slide-content {
+        position: relative;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
+    }
+    .country-desc-wrapper,
+    .country-img-wrapper {
+        padding: 30px 30px 30px 70px;
+        width: 100%;
+    }
+    .countries-list::before {
+        left: 30px;
+        top: 60px;
+    }
+    .country-desc-wrapper::after {
+        top: 50px;
+        left: 10px;
+    }
+}
+@media (max-width: 500px) {
+    h2 {
+        font-size: 25px;
+        line-height: 35px;
+    }
+    .slide-text {
+        font-size: 13px;
+        line-height: 15px;
+    }
+    .call-to-action-wrapper {
+        padding: 40px 20px;
+    }
+    .credit-item {
+        display: block;
+    }
+    .credit-item + .credit-item {
+        border-left: none;
+    }
+}
