@@ -115,6 +115,9 @@ header {
     z-index: 999;
     background-color: rgba(256,256,256,.8);
 }
+.navbar-toggle {
+    display: none;
+}
 .brand {
     font-family: "David Libre";
     font-size: 30px;
@@ -350,7 +353,8 @@ footer {
 @media (max-width: 767px) {
     .slide {
         height: auto;
-        padding-top: 50px;
+        padding-top: 60px;
+        padding-left: 10px;
     }
     .slide-content {
         position: relative;
@@ -371,6 +375,28 @@ footer {
     .country-desc-wrapper::after {
         top: 50px;
         left: 10px;
+    }
+    .navbar-toggle {
+        display: block;
+        background-color: transparent;
+        border: 1px #39f solid;
+        padding: 5px 10px;
+        font-family: 'David Libre', serif;
+        color: #39f;
+        margin-top: 20px;
+        margin-right: 20px;
+        float: right;
+        cursor: pointer;
+    }
+    .nav-collapse {
+        display: none;
+    }
+    .nav-menu {
+        width: 100%;
+    }
+    .menu-item {
+        display: block;
+        text-align: center;
     }
 }
 @media (max-width: 500px) {
